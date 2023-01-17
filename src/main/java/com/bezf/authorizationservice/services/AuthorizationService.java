@@ -5,11 +5,9 @@ import com.bezf.authorizationservice.exceptions.InvalidCredentials;
 import com.bezf.authorizationservice.exceptions.UnauthorizedUser;
 import com.bezf.authorizationservice.userRepository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public class AuthorizationService {
     private final UserRepository userRepository;
 

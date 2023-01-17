@@ -3,19 +3,19 @@ package com.bezf.authorizationservice.services;
 import com.bezf.authorizationservice.Authorities;
 import com.bezf.authorizationservice.exceptions.InvalidCredentials;
 import com.bezf.authorizationservice.exceptions.UnauthorizedUser;
-import com.bezf.authorizationservice.dao.UserDAO;
+import com.bezf.authorizationservice.userRepository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Component
+@Service
 public class AuthorizationService {
-    private final UserDAO UserDAO;
+    private final UserRepository userRepository;
 
     @Autowired
-    public AuthorizationService(UserDAO UserDAO) {
-        this.UserDAO = UserDAO;
+    public AuthorizationService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     public List<Authorities> getAuthorities(String user, String password) {
@@ -23,11 +23,11 @@ public class AuthorizationService {
             throw new InvalidCredentials("User name or password is empty");
         }
 
-        List<Authorities> userRights = UserDAO.getUserRights(user, password);
-        if (isEmpty(userRights)) {
+        List<Authorities> userAuthorities = userRepository.getUserAuthorities(user, password);
+        if (isEmpty(userAuthorities)) {
             throw new UnauthorizedUser("Unknown user " + user);
         }
-        return userRights;
+        return userAuthorities;
     }
 
     private boolean isEmpty(String str) {

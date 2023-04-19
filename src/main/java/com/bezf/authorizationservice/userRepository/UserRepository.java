@@ -2,11 +2,13 @@ package com.bezf.authorizationservice.userRepository;
 
 import com.bezf.authorizationservice.Authorities;
 import com.bezf.authorizationservice.model.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@Repository
 public class UserRepository {
     private static final List<User> users;
 

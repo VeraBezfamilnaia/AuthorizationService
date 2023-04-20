@@ -2,7 +2,7 @@
 
 ## The purpose of the application
 
-The purpose of the application is to check what permissions a given user has by logic and password and react accordingly to incorrect data by setting the appropriate response code to the request
+The purpose of the application is to check what permissions a given user has by login and password and react accordingly to incorrect data by setting the appropriate response code to the request
 
 ## Usage example
 

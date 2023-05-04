@@ -1,8 +1,8 @@
 # AuthorizationService
 
-## The purpose of the application
+## The  purpose of the project 
 
-The purpose of the application is to check what permissions a given user has by login and password and react accordingly to incorrect data by setting the appropriate response code to the request
+The  purpose of the project is to practice writing an application using the example of a user authorization service by login and password, which will respond to errors in the entered data by setting the appropriate response code for the request.
 
 ## Usage example
 

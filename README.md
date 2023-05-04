@@ -6,8 +6,8 @@ The purpose of the application is to check what permissions a given user has by 
 
 ## Usage example
 
+https://user-images.githubusercontent.com/66965572/236322525-d90d0b18-150f-472f-808c-3ffebc6782f1.mov
 
-https://user-images.githubusercontent.com/66965572/233117163-f1f0fce9-b666-4239-bd5e-23fc2f51b3a7.mov
 
 ### Explanation
 **case 1:** when the user data, namely username and password are entered correctly, user permissions are shown  
